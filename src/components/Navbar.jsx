@@ -18,19 +18,16 @@ function Navbar() {
   }, []);
 
   const scrollToSection = (id) => {
-    console.log(id);
-
     const element = document.querySelector(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  console.log(navbarData);
 
   return (
     <div className="w-[100vw] text-darkBrown z-40 ">
-      <div className=" max-w-7xl  mx-auto flex justify-between py-4 bg-[#F3E7D5] lg:px-12 px-6 rounded-md">
+      <div className=" max-w-7xl  mx-auto flex justify-between py-4 bg-cream lg:px-12 px-6 rounded-md">
         <div className="flex gap-x-2 items-center">
           {navbarData?.logoImage && (
             <img
@@ -43,12 +40,12 @@ function Navbar() {
             {navbarData?.title || "Loading Navbar..."}
           </h1>
         </div>
-        <ul className="flex items-center space-x-6 font-medium uppercase tracking-wide">
+        <ul className="flex items-center space-x-6 font-medium uppercase tracking-wide ">
           {navbarData?.links?.map((link, index) => (
             <li
               key={index}
               onClick={() => scrollToSection(`#${link.url}`)}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-red-800"
             >
               {link.label}
             </li>
@@ -57,7 +54,7 @@ function Navbar() {
         <ul className="flex items-center space-x-4">
           {navbarData?.endLinks?.map((endLink, index) => (
             <li key={index}>
-              <a href={endLink.url}>{endLink.label}</a>
+              <a className="cursor-not-allowed" href={endLink.url}>{endLink.label}</a>
             </li>
           ))}
         </ul>

@@ -85,7 +85,7 @@ const Home = () => {
       <div className="hidden absolute top-12 md:flex flex-col items-center z-40 ">
         <Navbar />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center text-[#F3E7D5] text-center md:text-start z-10 ">
+      <div className="absolute inset-0 flex flex-col items-center text-cream text-center md:text-start z-10 ">
         <div className="absolute md:hidden inline top-24 text-7xl">
           ISS Club
         </div>

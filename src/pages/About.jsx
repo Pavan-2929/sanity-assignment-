@@ -42,7 +42,7 @@ const About = () => {
               </div>
               <div className="flex flex-col justify-between pt-12">
                 <div className="space-y-6">
-                  <h1 className="text-3xl font-medium text-[#3B2216] scale-y-110">
+                  <h1 className="text-3xl font-medium text-darkBrown scale-y-110">
                     {aboutData.subHeader}
                   </h1>
                   <p className="text-md tracking-wider">

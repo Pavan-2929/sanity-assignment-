@@ -24,7 +24,7 @@ const Events = () => {
 
   if (!eventsData) {
     return (
-      <div className="flex items-center justify-center h-16 w-full bg-[#F3E7D5]">
+      <div className="flex items-center justify-center h-16 w-full bg-cream">
         <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-darkBrown"></div>
       </div>
     );
@@ -79,7 +79,7 @@ const Events = () => {
                   </div>
                   <div className="w-full mt-4">
                     {card.buttonText && (
-                      <button className="w-full mt-auto px-4 py-2 border border-[#3B2216] text-[#3B2216 rounded-md hover:bg-[#c78c73] transition duration-300">
+                      <button className="w-full mt-auto px-4 py-2 border border-darkBrown text-darkBrown rounded-md hover:bg-[#c78c73] transition duration-300">
                         {card.buttonText}
                       </button>
                     )}

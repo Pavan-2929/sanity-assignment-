@@ -22,7 +22,7 @@ const NewsLetter = () => {
 
   if (!newsLetterData) {
     return (
-      <div className="flex items-center justify-center h-16 w-full bg-[#F3E7D5]">
+        <div className="flex items-center justify-center h-16 w-full bg-cream">
         <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-darkBrown"></div>
       </div>
     );
@@ -56,7 +56,7 @@ const NewsLetter = () => {
                   className="bg-[#EED9BB] px-4 py-2 rounded-t-md md:rounded-l-md md:rounded-tr-none md:w-[280px] lg:w-[400px] text-black placeholder:text-black mb-4 md:mb-0"
                   placeholder="Email..."
                 />
-                <button className="bg-[#3B2216] text-white rounded-b-md md:rounded-r-md md:rounded-bl-none px-6 py-3 text-sm font-semibold">
+                <button className="bg-darkBrown text-white rounded-b-md md:rounded-r-md md:rounded-bl-none px-6 py-3 text-sm font-semibold">
                   Subscribe
                 </button>
               </div>
