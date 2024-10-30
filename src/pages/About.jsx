@@ -45,7 +45,7 @@ const About = () => {
                   <h1 className="text-3xl font-medium text-[#3B2216] scale-y-110">
                     {aboutData.subHeader}
                   </h1>
-                  <p className="text-md  tracking-wider">
+                  <p className="text-md tracking-wider">
                     {aboutData.subDescription}
                   </p>
                 </div>
@@ -64,7 +64,9 @@ const About = () => {
               </div>
             </div>
           ) : (
-            <p>Loading About Section...</p>
+            <div className="flex items-center justify-center h-48">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-darkBrown"></div>
+            </div>
           )}
         </div>
       </LayOut>

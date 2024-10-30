@@ -55,6 +55,7 @@ const Home = () => {
       />
     ),
   };
+
   return (
     <div id="home" className="relative w-full h-screen overflow-hidden">
       {homeData ? (
@@ -77,9 +78,10 @@ const Home = () => {
           })}
         </Slider>
       ) : (
-        <p>Loading...</p>
+        <div className="flex items-center justify-center h-full">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-yellow-500"></div>
+        </div>
       )}
-
       <div className="hidden absolute top-12 md:flex flex-col items-center z-40 ">
         <Navbar />
       </div>

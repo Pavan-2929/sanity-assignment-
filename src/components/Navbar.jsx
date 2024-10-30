@@ -1,4 +1,3 @@
-// App.js
 import { useState, useEffect } from "react";
 import { client } from "../sanity";
 import imageUrlBuilder from "@sanity/image-url";
