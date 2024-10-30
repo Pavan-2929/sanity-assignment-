@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dot {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s;
+}
+
+/* Styling for active dot */
+.slick-dots .slick-active .dot {
+  background: white; /* Full opacity for the active dot */
+  transform: scale(1.2); /* Slightly enlarge the active dot */
+}
