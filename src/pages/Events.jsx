@@ -59,7 +59,7 @@ const Events = () => {
                     {card.content}
                   </p>
 
-                  <div className="flex justify-between items-center mt-6">
+                  <div className="flex justify-between items-center mt-10">
                     <div className="flex items-center space-x-2">
                       <p className="text-5xl scale-y-150 pb-1">{card.day}</p>
                       <div className="scale-y-150 text-xs tracking-wide font-extralight opacity-80 leading-4 text-center">
@@ -88,7 +88,7 @@ const Events = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full mt-4">
+                  <div className="w-full mt-8">
                     {card.buttonText && (
                       <button className="w-full mt-auto px-4 py-2 border border-darkBrown text-darkBrown rounded-md hover:bg-[#c78c73] transition duration-300">
                         {card.buttonText}

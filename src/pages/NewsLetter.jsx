@@ -38,7 +38,7 @@ const NewsLetter = () => {
               backgroundImage: `url(${urlFor(newsLetterData.image).url()})`,
             }}
           >
-            <div className="w-full bg-black bg-opacity-50 h-full flex flex-col justify-center text-white absolute top-0 text-center px-4 md:px-8">
+            <div className="w-full bg-black bg-opacity-50 h-full flex flex-col justify-center text-cream absolute top-0 text-center px-4 md:px-8">
               <div className="space-y-4 md:space-y-6">
                 <p className="text-3xl md:text-5xl scale-y-125 font-georgia tracking-wider">
                   {newsLetterData?.header}
@@ -56,7 +56,7 @@ const NewsLetter = () => {
                   className="bg-[#EED9BB] px-4 py-2 rounded-t-xl md:rounded-l-xl md:rounded-tr-none md:w-[280px] lg:w-[400px] text-black placeholder:text-black mb-4 md:mb-0"
                   placeholder="Email..."
                 />
-                <button className="bg-darkBrown text-white rounded-b-xl md:rounded-r-xl md:rounded-bl-none px-20 py-3 text-sm font-semibold">
+                <button className="bg-darkBrown text-cream rounded-b-xl md:rounded-r-xl md:rounded-bl-none px-20 py-3 text-sm font-semibold">
                   Subscribe
                 </button>
               </div>
