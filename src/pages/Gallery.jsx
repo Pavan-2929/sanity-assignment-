@@ -4,6 +4,7 @@ import LayOut from "../components/LayOut";
 import { client } from "../sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import Title from "../components/Title";
+import { FaArrowRight } from "react-icons/fa6";
 
 const builder = imageUrlBuilder(client);
 const urlFor = (source) => builder.image(source);
@@ -34,17 +35,28 @@ const Gallery = () => {
         <div className="mb-8" id="gallery">
           <Title text={galleryData?.header} />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {galleryData &&
             galleryData.images.map((image, index) => (
-              <div key={index} className="p-2">
+              <div
+                key={index}
+                className={`p-2 ${
+                  index === 1 || index === 5 ? "col-span-2" : "col-span-1"
+                }`}
+              >
                 <img
                   src={urlFor(image).url()}
                   alt={image.alt || "Gallery image"}
-                  className="w-full h-64 object-cover rounded-md shadow-lg" // Fixed height of 64 units
+                  className="w-full h-64 object-cover rounded-md shadow-lg"
                 />
               </div>
             ))}
+        </div>
+        <div className="flex justify-center border border-darkBrown rounded-2xl w-fit mx-auto px-4 py-[6px]  mt-12">
+          <button className="flex gap-x-2 items-center uppercase text-xs opacity-80">
+            {galleryData && galleryData.buttonText}
+            <FaArrowRight className="opacity-60" />
+          </button>
         </div>
       </LayOut>
     </LargeContainer>

@@ -39,24 +39,24 @@ const NewsLetter = () => {
             }}
           >
             <div className="w-full bg-black bg-opacity-50 h-full flex flex-col justify-center text-white absolute top-0 text-center px-4 md:px-8">
-              <div className="space-y-4 md:space-y-2">
-                <p className="text-3xl md:text-5xl font-medium scale-y-125">
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-3xl md:text-5xl scale-y-125 font-georgia tracking-wider">
                   {newsLetterData?.header}
                 </p>
-                <p className="text-xl md:text-3xl">
+                <p className="text-3xl md:text-5xl scale-y-110 font-georgia tracking-wider">
                   {newsLetterData?.subHeader}
                 </p>
               </div>
-              <div className="max-w-md lg:max-w-xl my-8 mx-auto text-base md:text-lg lg:text-xl">
+              <div className="max-w-md lg:max-w-xl mt-12 mb-8 mx-auto text-base md:text-lg lg:text-xl">
                 <p>{newsLetterData?.Content}</p>
               </div>
-              <div className="flex flex-col md:flex-row justify-center mt-4">
+              <div className="flex flex-col md:flex-row justify-center">
                 <input
                   type="text"
-                  className="bg-[#EED9BB] px-4 py-2 rounded-t-md md:rounded-l-md md:rounded-tr-none md:w-[280px] lg:w-[400px] text-black placeholder:text-black mb-4 md:mb-0"
+                  className="bg-[#EED9BB] px-4 py-2 rounded-t-xl md:rounded-l-xl md:rounded-tr-none md:w-[280px] lg:w-[400px] text-black placeholder:text-black mb-4 md:mb-0"
                   placeholder="Email..."
                 />
-                <button className="bg-darkBrown text-white rounded-b-md md:rounded-r-md md:rounded-bl-none px-6 py-3 text-sm font-semibold">
+                <button className="bg-darkBrown text-white rounded-b-xl md:rounded-r-xl md:rounded-bl-none px-20 py-3 text-sm font-semibold">
                   Subscribe
                 </button>
               </div>

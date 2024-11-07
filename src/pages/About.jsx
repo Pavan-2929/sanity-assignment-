@@ -27,21 +27,21 @@ const About = () => {
         <div id="about">
           <Title text={aboutData?.header} />
           {aboutData ? (
-            <div className="flex gap-x-12 text-darkBrown md:flex-row flex-col">
-              <div className="max-w-lg space-y-12 md:mt-12 mt-0">
+            <div className="flex gap-x-12 text-darkBrown md:mt-2 mt-0 md:flex-row flex-col">
+              <div className="max-w-lg space-y-12">
                 {aboutData?.aboutUsLogo && (
                   <img
                     src={urlFor(aboutData?.aboutUsLogo)}
                     alt="Header Image"
-                    className="md:w-[350px] w-[200px] h-auto mt-12"
+                    className="md:w-[350px] w-[200px] h-auto mt-12 grayscale"
                   />
                 )}
-                <p className="text-2xl scale-y-110 tracking-widest leading-8 font-medium">
+                <p className="text-2xl scale-y-110 tracking-widest leading-8 lg:pt-6 font-medium">
                   {aboutData.leftContent}
                 </p>
               </div>
-              <div className="flex flex-col justify-between pt-12">
-                <div className="space-y-6">
+              <div className="flex flex-col justify-between pt-8">
+                <div className="space-y-3">
                   <h1 className="text-3xl font-medium text-darkBrown scale-y-110">
                     {aboutData.subHeader}
                   </h1>
@@ -53,7 +53,7 @@ const About = () => {
                   <img
                     src={urlFor(aboutData.about1)}
                     alt=""
-                    className="w-[45%] md:h-[360px]"
+                    className="w-[45%] md:h-[400px]"
                   />
                   <img
                     src={urlFor(aboutData.about2)}

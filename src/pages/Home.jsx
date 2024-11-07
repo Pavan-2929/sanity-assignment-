@@ -37,6 +37,7 @@ const Home = () => {
           bottom: "25px",
           width: "100%",
           zIndex: 20,
+          background: "transparent",
         }}
       >
         <ul className="flex justify-center">{dots}</ul>
@@ -48,8 +49,8 @@ const Home = () => {
         style={{
           width: "10px",
           height: "10px",
+          border: "1px solid #f3e7d5",
           borderRadius: "50%",
-          background: "white",
           margin: "0 5px",
         }}
       />
@@ -57,7 +58,7 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="relative w-full h-screen overflow-hidden">
+    <div id="home" className="relative  h-screen overflow-hidden">
       {homeData ? (
         <Slider {...settings}>
           {homeData.background?.map((item, index) => {
@@ -85,13 +86,13 @@ const Home = () => {
       <div className="hidden absolute top-12 md:flex flex-col items-center z-40 ">
         <Navbar />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center text-cream text-center md:text-start z-10 ">
+      <div className=" absolute inset-0 flex flex-col items-center text-cream text-center md:text-start z-10 ">
         <div className="absolute md:hidden inline top-24 text-7xl">
           ISS Club
         </div>
-        <div className="absolute bottom-24 flex md:flex-row flex-col space-y-8 justify-between items-end max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="absolute bottom-24 flex md:flex-row flex-col space-y-8 justify-between items-end max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0 ">
           <div className="md:max-w-[90%] space-y-8">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-medium scale-y-125">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-medium scale-y-125 lg:tracking-wider">
               {homeData?.headerText}
             </h1>
             <p className="text-base md:text-lg mt-2 max-w-[80%] mx-auto md:mx-0 md:max-w-[60%]">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { client } from "../sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import { FaSearch } from "react-icons/fa";
 const builder = imageUrlBuilder(client);
 const urlFor = (source) => builder.image(source);
 
@@ -24,9 +25,8 @@ function Navbar() {
     }
   };
 
-
   return (
-    <div className="w-[100vw] text-darkBrown z-40 ">
+    <div className="w-[100vw] text-darkBrown z-40 font-poppins">
       <div className=" max-w-7xl  mx-auto flex justify-between py-4 bg-cream lg:px-12 px-6 rounded-md">
         <div className="flex gap-x-2 items-center">
           {navbarData?.logoImage && (
@@ -40,7 +40,7 @@ function Navbar() {
             {navbarData?.title || "Loading Navbar..."}
           </h1>
         </div>
-        <ul className="flex items-center space-x-6 font-medium uppercase tracking-wide ">
+        <ul className="flex items-center space-x-6 font-semibold uppercase tracking-wide ">
           {navbarData?.links?.map((link, index) => (
             <li
               key={index}
@@ -51,10 +51,15 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <ul className="flex items-center space-x-4">
+        <ul className="flex items-center space-x-10 font-semibold">
+          <li>
+            <FaSearch className="h-5 w-5 text-darkBrown" />
+          </li>
           {navbarData?.endLinks?.map((endLink, index) => (
             <li key={index}>
-              <a className="cursor-not-allowed" href={endLink.url}>{endLink.label}</a>
+              <a className="cursor-not-allowed" href={endLink.url}>
+                {endLink.label}
+              </a>
             </li>
           ))}
         </ul>
